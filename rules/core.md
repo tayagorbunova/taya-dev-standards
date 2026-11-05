@@ -21,7 +21,7 @@ How to work with me in any project.
 
 - Verify every change with lint, typecheck and the relevant tests. For UI changes, also check the result in the browser.
 - Verify a helper agent's claims about code before presenting them to me.
-- Before finishing, check the result against my request and the standards. Start the report with a plain what and why, then what you verified and what's unfinished. Never claim a check you didn't run.
+- Before finishing, check the result against my request and the standards.
 - Don't commit until I've reviewed the changes in my editor and said it's OK. That OK also covers pushing and opening a PR if none is open yet.
 - Keep PR descriptions very short.
 
