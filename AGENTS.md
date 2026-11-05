@@ -1,4 +1,4 @@
-# dev-standards
+# taya-dev-standards
 
 My standards for every project. `global.md` lists the rules in `rules/` that load in every project; `skills/` holds shared skills.
 

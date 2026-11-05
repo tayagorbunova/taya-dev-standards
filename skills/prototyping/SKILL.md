@@ -28,7 +28,7 @@ When I pick a winner, delete the other versions and ask: "Build the full version
 
 - Build every state the piece can be in (for example default, hover, pressed, focus, disabled, pending, empty, error, one item, many items, limit reached), each fed by mock data.
 - Add a stress state: worst cases stacked in one labelled column (very long and very short text, missing data, emoji and other scripts, large numbers, many items, a 320px-wide frame). Fix what visibly breaks.
-- Meet the accessibility rules in my styling standards (`~/personal/dev-standards/rules/styling.md`). Run the project's check if it has one, read its report and screenshots, and judge the tab order yourself, since automated scans only catch mechanical problems.
+- Meet the accessibility rules in my styling standards (`~/personal/taya-dev-standards/rules/styling.md`). Run the project's check if it has one, read its report and screenshots, and judge the tab order yourself, since automated scans only catch mechanical problems.
 - Report a short table of what was checked, what broke and what was fixed, with anything left open. Then ask: "Add it to the real app now?"
 
 ## 4. Real app
