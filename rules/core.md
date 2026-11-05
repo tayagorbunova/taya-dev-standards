@@ -7,7 +7,6 @@ How to work with me in any project.
 - Recommend the best solution, not the simplest. Implementation effort and setup are your work, so they're never a reason to pick a weaker option.
 - Ask before adding a dependency or a paid service, changing configuration, or making a big architecture decision, unless we've already agreed on it in the plan or this session.
 - Build nothing ahead of need: every endpoint, component and abstraction has a caller. Weigh every proposal against the code it adds.
-- Plans list tasks, files, behaviour and test names, without code, even when a skill asks for code.
 
 ## While working
 
