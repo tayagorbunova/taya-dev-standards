@@ -2,8 +2,8 @@
 
 My standards for every project: rules and skills for Claude Code, and lint and format configs.
 
-- `rules/`: the working agreement, communication, code, styling, testing and verification rules. `global.md` lists the ones that load in every project.
-- `skills/`: shared skills, such as planning and prototyping.
+- `rules/`: the working agreement, communication, code, testing and verification rules. `global.md` lists the ones that load in every project.
+- `skills/`: shared skills that load when a task needs them: planning, prototyping and styling.
 - `configs/`: ESLint, Stylelint and Prettier configs, installed as a package.
 - `docs/todo.md`: what's planned next.
 

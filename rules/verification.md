@@ -9,16 +9,7 @@
 
 ## By kind of change
 
-- UI: use the changed flow in the running app; a build alone isn't enough. Then check:
-  1. Widths: 320 px, each breakpoint, and a wide desktop window.
-  2. Text size: Chrome's font size setting on "Very large", and 200% zoom. No clipped or overlapping text, and no horizontal scrolling outside two-dimensional content.
-  3. Keyboard only: everything is reachable in a logical order, and focus is always visible and never hidden.
-  4. DevTools → Rendering: emulate `forced-colors: active`, `prefers-reduced-motion: reduce` and vision deficiencies.
-  5. Contrast of every new colour pair.
-  6. On a phone: no hover state sticks after a tap, and targets are at least 24 by 24 px.
-
-  When a screenshot looks broken but DOM measurements look fine, trust the screenshot and resolve the contradiction.
-
+- UI: a build alone isn't enough. Run the UI checks in the `styling` skill.
 - Performance: measure the actual bottleneck before the change, and compare the same workload afterwards.
 - Stored data: read back what was written, through the app's own interface.
 - Risky changes, such as to shared code, a stored data shape or auth: look for what depends on the change beyond the diff. Name the one fact that makes it safe, and prove it by running code.

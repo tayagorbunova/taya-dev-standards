@@ -1,3 +1,8 @@
+---
+name: styling
+description: Rules for styling web UI, covering units, design tokens, CSS, design-system components, layout, accessibility, performance, and the checks every UI change needs. Use when writing, reviewing or planning UI, CSS, components, design tokens or accessibility work, and before finishing any UI change.
+---
+
 # Styling
 
 ## Units
@@ -68,3 +73,16 @@
 ## Browser support
 
 - Check support for the project's browser targets before relying on a feature, and use newer features as progressive enhancement.
+
+## Checking UI changes
+
+Use the changed flow in the running app, then check:
+
+1. Widths: 320 px, each breakpoint, and a wide desktop window.
+2. Text size: Chrome's font size setting on "Very large", and 200% zoom. No clipped or overlapping text, and no horizontal scrolling outside two-dimensional content.
+3. Keyboard only: everything is reachable in a logical order, and focus is always visible and never hidden.
+4. DevTools → Rendering: emulate `forced-colors: active`, `prefers-reduced-motion: reduce` and vision deficiencies.
+5. Contrast of every new colour pair.
+6. On a phone: no hover state sticks after a tap, and targets are at least 24 by 24 px.
+
+When a screenshot looks broken but DOM measurements look fine, trust the screenshot and resolve the contradiction.
