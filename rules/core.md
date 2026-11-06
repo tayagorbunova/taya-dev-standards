@@ -14,13 +14,10 @@ How to work with me in any project.
 - Use the project's existing scripts, and scope checks to the affected package. Before running an unfamiliar command or script, check its supported options and what it does.
 - When library behaviour matters, check the docs for the version installed in the project (see `package.json`), on the web or in `node_modules`. Link your sources.
 - Before anything that deletes data, check what it will affect in one command, read the result, and only then run the delete as a separate step.
-- Before a performance change, measure the actual bottleneck, and compare the same workload afterwards.
 
 ## Finishing
 
-- Verify every change with lint, typecheck and the relevant tests. For UI changes, also check the result in the browser.
-- Verify a helper agent's claims about code before presenting them to me.
-- Before finishing, check the result against my request and the standards.
+- Verify every change as described in my verification rules.
 - Don't commit until I've reviewed the changes in my editor and said it's OK. That OK also covers pushing and opening a PR if none is open yet.
 - Keep PR descriptions very short.
 

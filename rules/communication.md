@@ -26,7 +26,7 @@ How to write to me. Most of my work is reading what you write and making decisio
 
 ## Reports
 
-- When you finish, start with a plain what and why, then what you verified and what's unfinished. Never claim a check you didn't run.
+- When you finish, start with a plain what and why, then what you verified and what's unfinished.
 
 ## My answers
 

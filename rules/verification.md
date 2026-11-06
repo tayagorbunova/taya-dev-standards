@@ -1,0 +1,31 @@
+# Verification
+
+## Every change
+
+- Verify every change with lint, typecheck and the relevant tests.
+- Check the real result, not a stand-in: a bug is fixed when its original symptom is gone, not when the code changed.
+- Before finishing, check the result item by item against my request, the plan if there is one, and the standards.
+- Report each check you ran with its result. Never claim a check you didn't run, and name any you couldn't run.
+
+## By kind of change
+
+- UI: use the changed flow in the running app; a build alone isn't enough. Then check:
+  1. Widths: 320 px, each breakpoint, and a wide desktop window.
+  2. Text size: Chrome's font size setting on "Very large", and 200% zoom. No clipped or overlapping text, and no horizontal scrolling outside two-dimensional content.
+  3. Keyboard only: everything is reachable in a logical order, and focus is always visible and never hidden.
+  4. DevTools → Rendering: emulate `forced-colors: active`, `prefers-reduced-motion: reduce` and vision deficiencies.
+  5. Contrast of every new colour pair.
+  6. On a phone: no hover state sticks after a tap, and targets are at least 24 by 24 px.
+
+  When a screenshot looks broken but DOM measurements look fine, trust the screenshot and resolve the contradiction.
+
+- Performance: measure the actual bottleneck before the change, and compare the same workload afterwards.
+- Stored data: read back what was written, through the app's own interface.
+- Risky changes, such as to shared code, a stored data shape or auth: look for what depends on the change beyond the diff. Name the one fact that makes it safe, and prove it by running code.
+
+## Code review
+
+- Before handing planned work to me, have a fresh reviewer agent review it. Give it only the diff, my request or the plan, and the standards, not this session's history.
+- The reviewer answers two questions separately: does the code follow the standards, and does it do what was asked? It reports real problems only, not taste.
+- Verify a helper agent's claims, including review findings, against the code before you act on them or show them to me.
+- When I or a reviewer suggest a change, check it against the code before making it, and push back with reasons when it's wrong. Ask about unclear items before changing anything.
