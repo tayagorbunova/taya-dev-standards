@@ -10,7 +10,7 @@ Use this for bigger work: a feature with several steps, or a change across sever
 ## 1. Questions first
 
 - Look up facts yourself in the code, the docs and the installed versions. Ask the user only about decisions.
-- Ask every question you can already answer in one numbered round. Give each a recommended answer, worded so "yes" accepts it.
+- Ask all your current questions in one numbered round. Give each a recommended answer, worded so "yes" accepts it.
 - Ask another round only when the user's answers raise new questions. Then write the plan.
 
 ## 2. The plan
