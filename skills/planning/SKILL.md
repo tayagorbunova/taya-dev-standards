@@ -31,7 +31,7 @@ Use this for bigger work: a feature with several steps, or a change across sever
   1. **<Step name>**
      - Changes: what changes for the user.
      - Decisions: the key technical choices, in plain words.
-     - Check: what I can see or run when the step is done.
+     - Check: what I can see or run when the step is done, and the name of each test it adds.
   ```
 
 - Make each step something I could approve or reject on its own, and order the steps so each one ends in a working state.
