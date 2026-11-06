@@ -16,7 +16,7 @@ Use this for bigger work: a feature with several steps, or a change across sever
 ## 2. The plan
 
 - Save it as `docs/plans/<YYYY-MM-DD>-<topic>.md`.
-- Keep it as short as it can be without losing anything the user needs to approve it. Follow the communication rules (`~/personal/taya-dev-standards/rules/communication.md`).
+- Keep it as short as it can be without losing anything the user needs to approve it. Follow the communication rules.
 - No code and no file lists. The user reviews the code itself afterwards.
 - Use this shape:
 
