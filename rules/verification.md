@@ -23,6 +23,11 @@
 - Stored data: read back what was written, through the app's own interface.
 - Risky changes, such as to shared code, a stored data shape or auth: look for what depends on the change beyond the diff. Name the one fact that makes it safe, and prove it by running code.
 
+## Bug fixes
+
+- Fix the root cause, not the place where the error showed up. Never hide a bug with a guard, a retry or a swallowed error.
+- After 3 failed fixes, stop and tell me what you tried and what you think is wrong.
+
 ## Code review
 
 - Before handing planned work to me, have a fresh reviewer agent review it. Give it only the diff, my request or the plan, and the standards, not this session's history.
