@@ -1,11 +1,11 @@
 ---
 name: prototyping
-description: The workflow for prototyping, exploring or trying a design or feature idea before building it properly. Use whenever I say "prototype X", "try a few versions of Y", "explore Z" or ask to see options for a component, screen or effect, even without the word "prototype". Covers exploring versions, picking a winner, building the full version with every state, and moving it into the real app.
+description: The workflow for prototyping, exploring or trying a design or feature idea before building it properly. Use whenever the user says "prototype X", "try a few versions of Y", "explore Z" or asks to see options for a component, screen or effect, even without the word "prototype". Covers exploring versions, picking a winner, building the full version with every state, and moving it into the real app.
 ---
 
 # Prototyping
 
-Explore a piece visually, let me pick a winner, then finish it properly. Never move to the next stage without my yes.
+Explore a piece visually, let the user pick a winner, then finish it properly. Never move to the next stage without the user's yes.
 
 ## Where
 
@@ -18,11 +18,11 @@ Explore a piece visually, let me pick a winner, then finish it properly. Never m
 - Three versions by default, five at most. Each is a clearly different direction, named by its character ("Quiet", "Editorial", "Playful"), never A, B, C.
 - Use realistic content in realistic amounts.
 - Versions are visuals only: no edge cases, error states, accessibility work or tests yet.
-- Give every version live controls for its two to five key values. When I send tweaked values, make them the version's defaults.
+- Give every version live controls for its two to five key values. When the user sends tweaked values, make them the version's defaults.
 
 ## 2. Pick
 
-When I pick a winner, delete the other versions and ask: "Build the full version now?"
+When the user picks a winner, delete the other versions and ask: "Build the full version now?"
 
 ## 3. Full version
 
