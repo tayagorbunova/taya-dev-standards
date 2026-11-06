@@ -1,8 +1,8 @@
 # taya-dev-standards
 
-My standards for every project: rules and skills for Claude Code and Codex, and lint and format configs.
+My standards for every project: rules and skills for Claude Code, and lint and format configs.
 
-- `rules/`: the working agreement, communication, code and styling rules. `global.md` lists the ones that load in every project.
+- `rules/`: the working agreement, communication, code, styling, testing and verification rules. `global.md` lists the ones that load in every project.
 - `skills/`: shared skills, such as planning and prototyping.
 - `configs/`: ESLint, Stylelint and Prettier configs, installed as a package.
 - `docs/todo.md`: what's planned next.
@@ -25,6 +25,6 @@ Clone the repo, then run:
 
     scripts/install.sh
 
-It links each skill into `~/.claude/skills` and `~/.agents/skills`, adds an import of `global.md` to `~/.claude/CLAUDE.md`, and links `~/.codex/AGENTS.md` to the generated `dist/AGENTS.md`, because Codex can't import files. A pre-commit hook rebuilds that file.
+It links each skill into `~/.claude/skills` and adds an import of `global.md` to `~/.claude/CLAUDE.md`.
 
 A project adds only its own rules in its `AGENTS.md`; where they conflict with these, the project's win.

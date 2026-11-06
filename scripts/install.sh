@@ -16,20 +16,9 @@ link() {
   echo "Linked $target"
 }
 
-"$repo/scripts/build.sh"
-git -C "$repo" config core.hooksPath .githooks
-
 for skill in "$repo"/skills/*/; do
-  name="$(basename "$skill")"
-  link "${skill%/}" "$HOME/.claude/skills/$name"
-  link "${skill%/}" "$HOME/.agents/skills/$name"
+  link "${skill%/}" "$HOME/.claude/skills/$(basename "$skill")"
 done
-
-codex_rules="$HOME/.codex/AGENTS.md"
-if [[ -f "$codex_rules" && ! -L "$codex_rules" && ! -s "$codex_rules" ]]; then
-  rm "$codex_rules"
-fi
-link "$repo/dist/AGENTS.md" "$codex_rules"
 
 claude_rules="$HOME/.claude/CLAUDE.md"
 import="@${repo/#$HOME/~}/global.md"
