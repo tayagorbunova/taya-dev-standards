@@ -10,7 +10,7 @@ My standards for every project: rules and skills for Claude Code, and lint and f
 
 Add the package as a dev dependency, pinned to a tag:
 
-    pnpm add -D github:tayagorbunova/taya-dev-standards#v0.1.0
+    pnpm add -D github:tayagorbunova/taya-dev-standards#v0.2.0
 
 Then extend the configs and add the project's own rules after them:
 

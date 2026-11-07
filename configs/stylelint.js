@@ -1,13 +1,6 @@
-const TOKEN_ONLY_PROPERTIES = [
-  "/color$/",
-  "background",
-  "fill",
-  "stroke",
-  "font-size",
-  "/^margin/",
-  "/^padding/",
-  "/gap$/",
-];
+const COLOR_PROPERTIES = ["/^(?!--).*color$/", "background", "fill", "stroke"];
+
+const SPACING_PROPERTIES = ["font-size", "/^margin/", "/^padding/", "/^(?!--).*gap$/"];
 
 const KEYWORDS_ALLOWED_WITHOUT_TOKENS = [
   "0",
@@ -25,9 +18,32 @@ const KEYWORDS_ALLOWED_WITHOUT_TOKENS = [
   "GrayText",
 ];
 
+const MAX_NESTING = 6;
+
+// Regular expressions can't count brackets, so this matches balanced brackets up to a fixed depth.
+function parenthesized(depth) {
+  const inner = depth > 1 ? `[^()]|${parenthesized(depth - 1)}` : "[^()]";
+
+  return String.raw`\((?:${inner})*\)`;
+}
+
+const PARENTHESIZED = parenthesized(MAX_NESTING);
+
+const TOKEN = String.raw`-?var(?=\(\s*--)${PARENTHESIZED}`;
+
+const FUNCTION = String.raw`(?!-?var\()[\w-]+${PARENTHESIZED}`;
+
+const KEYWORD = KEYWORDS_ALLOWED_WITHOUT_TOKENS.join("|");
+
+function allowOnly(properties, parts) {
+  const part = `(?:${parts.join("|")})`;
+  const value = new RegExp(String.raw`^${part}(?:\s+${part})*$`);
+
+  return Object.fromEntries(properties.map((property) => [property, [value]]));
+}
+
 export default {
   extends: ["stylelint-config-recommended"],
-  plugins: ["stylelint-declaration-strict-value"],
   rules: {
     "declaration-property-unit-allowed-list": {
       "font-size": ["rem"],
@@ -37,11 +53,13 @@ export default {
       html: ["font-size"],
       ":root": ["font-size"],
     },
-    "scale-unlimited/declaration-strict-value": [
-      TOKEN_ONLY_PROPERTIES,
+    "declaration-property-value-allowed-list": [
       {
-        ignoreValues: KEYWORDS_ALLOWED_WITHOUT_TOKENS,
-        ignoreFunctions: { "/color$/": false, background: false, fill: false, stroke: false },
+        ...allowOnly(COLOR_PROPERTIES, [TOKEN, KEYWORD]),
+        ...allowOnly(SPACING_PROPERTIES, [TOKEN, FUNCTION, KEYWORD]),
+      },
+      {
+        message: (property, value) => `Expected a design token for "${property}", not "${value}"`,
       },
     ],
     "unit-disallowed-list": ["vh"],
