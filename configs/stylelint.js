@@ -20,7 +20,6 @@ const KEYWORDS_ALLOWED_WITHOUT_TOKENS = [
 
 const MAX_NESTING = 6;
 
-// Regular expressions can't count brackets, so this matches balanced brackets up to a fixed depth.
 function parenthesized(depth) {
   const inner = depth > 1 ? `[^()]|${parenthesized(depth - 1)}` : "[^()]";
 
