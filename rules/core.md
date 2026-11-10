@@ -8,6 +8,12 @@ How to work with the user in any project.
 - Ask before adding a dependency or a paid service, changing configuration, or making a big architecture decision, unless the user has already agreed to it in the plan or this session.
 - Build nothing ahead of need: every endpoint, component and abstraction has a caller. Weigh every proposal against the code it adds.
 
+## Clean design
+
+- Clean, readable code matters more than a small diff. Build each change so it fits the codebase naturally, with clear modules and separation of concerns. Never bolt a feature on just because it was asked for.
+- When a change doesn't fit the current structure cleanly, stop before building it and say so. Explain what doesn't fit, the refactor you recommend and what it touches. Large refactors are welcome; unannounced ones aren't.
+- When you notice code that a refactor would make clearer, even outside the task, propose it instead of working around it or changing it silently.
+
 ## While working
 
 - When the user corrects one instance of a pattern, fix every instance in the same change.
