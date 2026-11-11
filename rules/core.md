@@ -13,6 +13,7 @@ How to work with the user in any project.
 - Clean, readable code matters more than a small diff. Build each change so it fits the codebase naturally, with clear modules and separation of concerns. Never bolt a feature on just because it was asked for.
 - When a change doesn't fit the current structure cleanly, stop before building it and say so. Explain what doesn't fit, the refactor you recommend and what it touches. Large refactors are welcome; unannounced ones aren't.
 - When you notice code that a refactor would make clearer, even outside the task, propose it instead of working around it or changing it silently.
+- When existing code makes the clean solution awkward, change that code instead of working around it, and tell the user why. Treat every workaround as a sign that something underneath should change.
 
 ## While working
 

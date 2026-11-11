@@ -23,5 +23,6 @@
 
 - Before handing planned work to the user, have a fresh reviewer agent review it. Give it only the diff, the user's request or the plan, and the standards, not this session's history.
 - The reviewer answers two questions separately: does the code follow the standards, and does it do what was asked? It reports real problems only, not taste.
+- The reviewer also flags workarounds: code bent to fit around something that should have been changed instead.
 - Verify a helper agent's claims, including review findings, against the code before you act on them or show them to the user.
 - When the user or a reviewer suggests a change, check it against the code before making it, and push back with reasons when it's wrong. Ask about unclear items before changing anything.

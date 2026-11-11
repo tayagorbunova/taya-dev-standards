@@ -35,6 +35,7 @@ description: Rules for styling web UI, covering units, design tokens, CSS, desig
 - Global CSS holds only the reset, the tokens and base element styles.
 - A component never places or styles its parent, or another component's elements, and has no outer margin. The parent places and spaces its children, using `gap`.
 - Put `:hover` inside `@media (hover: hover)`, and show focus with `:focus-visible`.
+- Don't add shadows (`box-shadow`, `drop-shadow()`, `text-shadow`) unless the user asks for one, prototypes included. Separate layers with colour or a border instead.
 
 ## Design-system components
 
