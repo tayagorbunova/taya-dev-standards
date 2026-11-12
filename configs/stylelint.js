@@ -69,5 +69,6 @@ export default {
     },
     "property-disallowed-list": ["will-change"],
     "declaration-no-important": true,
+    "selector-pseudo-class-no-unknown": [true, { ignorePseudoClasses: ["global"] }],
   },
 };

@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.1
+
+- Stylelint accepts CSS Modules' `:global(...)`, which keeps a name such as a view transition type from being renamed.
+
+To upgrade a project, bump the pin to `#v0.2.1`.
+
 ## 0.2.0
 
 - ESLint 10 is now required. `eslint:recommended` adds `no-unassigned-vars`, `no-useless-assignment` and `preserve-caught-error`. See the [ESLint 10 migration guide](https://eslint.org/docs/latest/use/migrate-to-10.0.0).
