@@ -3,7 +3,7 @@
 ## Comments
 
 - A rule that matters gets a test named after it, for example "returns 404, not 403, for another user's record", instead of a comment.
-- Comment only what the code can't show, such as a library quirk or a measured value: one line about why, with a source link if there is one. Explain everything else in chat.
+- Don't write code comments. Explain everything in chat.
 
 ## Naming and types
 
