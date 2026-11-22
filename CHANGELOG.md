@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3.1
+
+- Decisions go in `DECISIONS.md` at the project's root instead of `docs/decisions.md`, so they're tracked in git. The lint messages say so.
+
+To upgrade a project, bump the pin to `#v0.3.1` and move `docs/decisions.md` to `DECISIONS.md`.
+
 ## 0.3.0
 
 - Code comments are errors. ESLint's `standards/no-comments` rejects every comment except ESLint directives (`eslint-disable`, `global` and the like, with a reason after `--`), `@ts-` directives, `/// <reference>`, `prettier-ignore` and a shebang. Stylelint's `comment-pattern` rejects every CSS comment except `stylelint-disable`, `stylelint-enable` and `prettier-ignore`.

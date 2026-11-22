@@ -73,7 +73,7 @@ export default {
       "^\\s*(stylelint-(disable|enable)|prettier-ignore)",
       {
         message:
-          "Don't write code comments. Record a decision the code can't show in docs/decisions.md, and a workaround in docs/todo.md.",
+          "Don't write code comments. Record a decision the code can't show in DECISIONS.md, and a workaround in docs/todo.md.",
       },
     ],
     "selector-pseudo-class-no-unknown": [true, { ignorePseudoClasses: ["global"] }],

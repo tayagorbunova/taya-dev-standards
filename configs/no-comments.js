@@ -10,7 +10,7 @@ export const noComments = {
     docs: { description: "Disallow code comments, except tool directives" },
     messages: {
       comment:
-        "Don't write code comments. Record a decision the code can't show in docs/decisions.md, and a workaround in docs/todo.md.",
+        "Don't write code comments. Record a decision the code can't show in DECISIONS.md, and a workaround in docs/todo.md.",
     },
     schema: [],
   },
