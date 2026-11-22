@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3.0
+
+- Code comments are errors. ESLint's `standards/no-comments` rejects every comment except ESLint directives (`eslint-disable`, `global` and the like, with a reason after `--`), `@ts-` directives, `/// <reference>`, `prettier-ignore` and a shebang. Stylelint's `comment-pattern` rejects every CSS comment except `stylelint-disable`, `stylelint-enable` and `prettier-ignore`.
+
+To upgrade a project, bump the pin to `#v0.3.0`, move each comment's decision into `docs/decisions.md` and each workaround into `docs/todo.md`, and delete the comments.
+
 ## 0.2.1
 
 - Stylelint accepts CSS Modules' `:global(...)`, which keeps a name such as a view transition type from being renamed.

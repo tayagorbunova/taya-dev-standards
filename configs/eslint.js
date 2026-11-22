@@ -3,6 +3,7 @@ import prettier from "eslint-config-prettier/flat";
 import checkFile from "eslint-plugin-check-file";
 import { importX } from "eslint-plugin-import-x";
 import tseslint from "typescript-eslint";
+import { noComments } from "./no-comments.js";
 
 const TYPESCRIPT_FILES = ["**/*.{ts,tsx}"];
 
@@ -35,6 +36,7 @@ export default [
     plugins: {
       "check-file": checkFile,
       "import-x": importX,
+      standards: { rules: { "no-comments": noComments } },
     },
     settings: {
       "import-x/parsers": { "@typescript-eslint/parser": [".ts", ".tsx"] },
@@ -42,6 +44,7 @@ export default [
     rules: {
       curly: ["error", "all"],
       "no-nested-ternary": "error",
+      "standards/no-comments": "error",
       "import-x/no-cycle": "error",
       "check-file/filename-naming-convention": [
         "error",

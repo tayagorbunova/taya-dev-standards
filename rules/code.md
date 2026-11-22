@@ -3,7 +3,8 @@
 ## Comments
 
 - A rule that matters gets a test named after it, for example "returns 404, not 403, for another user's record", instead of a comment.
-- Comment only what the code can't show, such as a library quirk or a measured value: one line about why, with a source link if there is one. Explain everything else in chat.
+- Don't write code comments; lint rejects them. Only tool directives are allowed: `eslint-disable` and the other ESLint directives, `@ts-expect-error`, `/// <reference>`, `prettier-ignore` and `stylelint-disable`. An `eslint-disable` gives its reason after `--`.
+- Record a decision the code can't show, such as a library quirk or a measured value, in the project's `docs/decisions.md`, under the file it applies to, with a source link if there is one. A workaround goes in `docs/todo.md` as a fix. Explain everything else in chat.
 
 ## Naming and types
 
